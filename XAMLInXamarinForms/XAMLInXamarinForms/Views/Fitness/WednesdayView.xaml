@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewmodels="clr-namespace:XAMLInXamarinForms.ViewModels"
+             mc:Ignorable="d"
+             x:Class="XAMLInXamarinForms.Views.Fitness.WednesdayView">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="Font">Calibri</Setter>
+                <Setter Property="BackgroundColor">White</Setter>
+                <Setter Property="HorizontalTextAlignment">Center</Setter>
+                <Setter Property="Padding">10</Setter>
+                <Setter Property="HorizontalOptions">FillAndExpand</Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout BindingContext="{viewmodels:FitnessViewModel}">
+            <Label Text="Wednesday" FontSize="Header" BackgroundColor="LightBlue" />
+            <Label Text="Running XX:XX" />
+            <Label Text="Situps XX:XX" />
+            <Label Text="Stairs XX:XX" />
+            <Label Text="Pushups XX:XX" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
