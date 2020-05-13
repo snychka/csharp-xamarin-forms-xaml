@@ -6,11 +6,28 @@
              xmlns:viewmodels="clr-namespace:XAMLInXamarinForms.ViewModels"
              mc:Ignorable="d"
              x:Class="XAMLInXamarinForms.Views.NavigationPageView">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="Font">Calibri</Setter>
+                <Setter Property="BackgroundColor">White</Setter>
+                <Setter Property="Margin">5</Setter>
+                <Setter Property="HorizontalOptions">FillAndExpand</Setter>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="Font">Calibri</Setter>
+                <Setter Property="BackgroundColor">White</Setter>
+                <Setter Property="HorizontalTextAlignment">Center</Setter>
+                <Setter Property="Padding">10</Setter>
+                <Setter Property="HorizontalOptions">FillAndExpand</Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout BindingContext="{viewmodels:PlannerViewModel}">
             <Label Text="Wellness Manager" FontSize="Header" BackgroundColor="LightBlue" />
-            <Label Text="{Binding Fitness}" />
-            <Label Text="{Binding Nutrition}" />
+            <Button Text="{Binding Fitness}" x:Name="FitnessButton" Clicked="FitnessButton_Clicked" />
+            <Button Text="{Binding Nutrition}" x:Name="NutritionButton" Clicked="NutritionButton_Clicked" />
             <Label Text="{Binding PassiveBurn, StringFormat='~{0} calories with be burned passively'}" />
             <Label Text="{Binding EstimatedOutcome}" />
         </StackLayout>
