@@ -14,7 +14,7 @@ RUN chown -R projects:projects ${APP_DIR}
 
 USER projects
 
-RUN dotnet build ${APP_DIR}/XAMLInXamarinForms/XAMLInXamarinForms.csproj
-RUN dotnet build ${APP_DIR}/XAMLInXamarinForms.Tests/XAMLInXamarinForms.Tests.csproj
+RUN dotnet build ${APP_DIR}/XAMLInXamarinForms/XAMLInXamarinForms/XAMLInXamarinForms.csproj
+RUN dotnet build ${APP_DIR}/XAMLInXamarinForms/XAMLInXamarinForms.Tests/XAMLInXamarinForms.Tests.csproj
 
 ENTRYPOINT ["/bin/sh"]
