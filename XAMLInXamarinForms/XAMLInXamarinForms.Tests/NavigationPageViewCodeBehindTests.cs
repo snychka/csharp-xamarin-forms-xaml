@@ -12,6 +12,16 @@ namespace XAMLInXamarinForms.Tests
         static string userCodeFile = "Views" + Path.DirectorySeparatorChar + "NavigationPageView.xaml.cs";
         static SyntaxNode ast = TestHelpers.GetUserAst(userCodeFile);
 
+        [Fact(DisplayName = "Add Using Directives @add-using-directives")]
+        public void AddUsingDirectives()
+        {
+            var usingDirectives = TestHelpers.GetUsingDirectives(ast);
+            var fitnessUsingDirective = usingDirectives.FirstOrDefault(e => e.ToString().Contains("XAMLInXamarinForms.Views.Fitness"));
+            var nutritionUsingDirective = usingDirectives.FirstOrDefault(e => e.ToString().Contains("XAMLInXamarinForms.Views.Nutrition"));
+            Assert.True(fitnessUsingDirective != null, "`NavigationPageView.xaml.cs` does not appear to contain a using directive for `XAMLInXamarinForms.Views.Fitness`.");
+            Assert.True(nutritionUsingDirective != null, "`NavigationPageView.xaml.cs` does not appear to contain a using directive for `XAMLInXamarinForms.Views.Nutrition`.");
+        }
+
         [Fact(DisplayName = "Add Fitness Button Click Event @add-fitness-button-click-event")]
         public void AddFitnessButtonClickEvent()
         {

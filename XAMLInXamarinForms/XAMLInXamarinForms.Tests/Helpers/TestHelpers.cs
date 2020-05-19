@@ -100,5 +100,10 @@ namespace XAMLInXamarinForms.Tests.Helpers
         {
             return ast.DescendantNodes().OfType<ExpressionStatementSyntax>();
         }
+
+        public static IEnumerable<UsingDirectiveSyntax> GetUsingDirectives(SyntaxNode ast)
+        {
+            return ast.DescendantNodes().OfType<UsingDirectiveSyntax>();
+        }
     }
 }

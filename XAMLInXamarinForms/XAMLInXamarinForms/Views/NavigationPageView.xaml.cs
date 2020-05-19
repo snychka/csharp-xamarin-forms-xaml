@@ -3,8 +3,6 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using XAMLInXamarinForms.ViewModels;
-using XAMLInXamarinForms.Views.Fitness;
-using XAMLInXamarinForms.Views.Nutrition;
 
 namespace XAMLInXamarinForms.Views
 {
