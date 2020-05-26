@@ -20,10 +20,10 @@
     <ContentPage.Content>
         <StackLayout BindingContext="{viewmodels:FitnessViewModel}">
             <Label Text="Monday" FontSize="Header" BackgroundColor="LightBlue" />
-            <Label Text="Running XX:XX" />
-            <Label Text="Situps XX:XX" />
-            <Label Text="Stairs XX:XX" />
-            <Label Text="Pushups XX:XX" />
+            <Label Text="Running 0:60" />
+            <Label Text="Situps 30:30" />
+            <Label Text="Stairs 12:12" />
+            <Label Text="Pushups 30:30" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
