@@ -9,8 +9,8 @@
     <ContentPage.Content>
         <StackLayout BindingContext="{viewmodels:PlannerViewModel}">
             <Label Text="Wellness Manager" FontSize="Header" BackgroundColor="LightBlue" />
-            <Button Text="{Binding Fitness}" />
-            <Button Text="{Binding Nutrition}" />
+            <Button x:Name="FitnessButton" Text="{Binding Fitness}" />
+            <Button x:Name="NutritionButton" Text="{Binding Nutrition}" />
             <Label Text="{Binding PassiveBurn, StringFormat='~{0} calories with be burned passively'}" />
             <Label Text="{Binding EstimatedOutcome}" />
         </StackLayout>
